@@ -1,0 +1,24 @@
+{
+    "name": "quizzytimes/api-application",
+    "authors": [
+        {
+            "name": "django11",
+            "email": "andriusvaskys11@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuizzyTimes\\Api\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "QuizzyTimes\\Api\\ApiServiceProvider"
+            ]
+        }
+    }
+}

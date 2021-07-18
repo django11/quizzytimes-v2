@@ -10,9 +10,30 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "axios": "^0.19",
+        "bootstrap": "^4.0.0",
+        "cross-env": "^5.2.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^6.0.25",
+        "lodash": "^4.17.13",
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.20.1",
+        "sass-loader": "^8.0.2",
+        "vue": "^2.5.17",
+        "vue-loader": "^15.9.7",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "laravel-file-manager": "^2.4.11",
+        "lottie-vuejs": "^0.3.7",
+        "lottie-web": "^5.6.5",
+        "vue-cookies": "^1.7.0",
+        "vue-loaders": "^3.3.0",
+        "vue-plugin-load-script": "^1.2.0",
+        "vue-router": "^3.1.5",
+        "vue-script-component": "^0.1.7",
+        "vue-social-sharing": "^3.0.0-beta.11",
+        "vue-toasted": "^1.1.27"
     }
 }

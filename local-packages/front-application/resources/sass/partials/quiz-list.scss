@@ -1,0 +1,20 @@
+.quiz-card {
+    border: 0 !important;
+    h3, h3 > a {
+        color: #333333;
+        font-size: 1.25rem;
+    }
+
+    .badge {
+        color: #fff;
+        border-radius: 0 !important;
+        padding: 0.35rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .quiz-badge {
+        font-weight: 500;
+        text-transform: uppercase;
+        background: #2e72ef;
+    }
+}

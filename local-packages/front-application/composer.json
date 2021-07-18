@@ -1,0 +1,24 @@
+{
+    "name": "quizzytimes/front-application",
+    "authors": [
+        {
+            "name": "django11",
+            "email": "andriusvaskys11@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuizzyTimes\\Front\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "QuizzyTimes\\Front\\FrontServiceProvider"
+            ]
+        }
+    }
+}

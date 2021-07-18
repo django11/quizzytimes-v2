@@ -1,0 +1,111 @@
+.single-quiz {
+    .question-number {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #2e72ef;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin-left: .75rem;
+            background: #2e72ef;
+        }
+    }
+
+    .question-title {
+        margin-bottom: 1rem;
+    }
+
+    .answer-btn {
+        display: block;
+        position: relative;
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #1d1d1d;
+        text-align: left;
+        line-height: 1.25;
+        background: #fff;
+        box-shadow: 0 0 5px 1px rgba(5, 5, 5, .1);
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem 1rem 1rem 3.5rem;
+        border: 1px solid #d9d9d9;
+        cursor: pointer;
+
+        &:before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //font-family: default-icomoon;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 45px;
+            font-size: 26px;
+            border-right: 1px solid #f2f2f2;
+            color: #e0e0e0;
+        }
+
+        &:hover {
+            border: 1px solid #a6a6a6;
+        }
+
+        &.answer-wrong {
+            background: #e32529;
+            color: #fff;
+
+            &:before {
+                //content: "\E5C9";
+                color: #fff;
+                border-right: 1px solid #e32529;
+            }
+
+            .qt-icon {
+                display: flex;
+            }
+        }
+
+        &.answer-correct {
+            background: #2dcc70;
+            color: #fff;
+            opacity: 1;
+
+            &:before {
+                //content: "\E5CA";
+                color: #fff;
+                border-right: 1px solid #2dcc70;
+            }
+
+            .qt-icon {
+                display: flex;
+            }
+        }
+
+        .qt-icon {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 45px;
+            font-size: 26px;
+            border-right: 1px solid #f2f2f2;
+            color: #fff;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
