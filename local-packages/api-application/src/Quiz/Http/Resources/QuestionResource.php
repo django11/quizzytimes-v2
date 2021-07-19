@@ -23,11 +23,11 @@ class QuestionResource extends JsonResource
         $resource = $this->resource;
 
         return [
-            'id'          => $resource->getId(),
-            'title'       => $resource->getQuestionText(),
-            'destription' => $resource->getDescription(),
-            'picture_url' => $resource->getPictureUrl(),
-            'answers'     => AnswerResource::collection($resource->getAnswers())
+            'id'            => $resource->getId(),
+            'question_text' => $resource->getQuestionText(),
+            'destription'   => $resource->getDescription(),
+            'picture_url'   => $resource->getPictureUrl(),
+            'answers'       => AnswerResource::collection($resource->getAnswers())
         ];
     }
 }
