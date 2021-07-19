@@ -26,10 +26,13 @@ class FrontServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'quizzytimes');
 
-        $quizCategories = Category::orderBy('title')->get();
-        View::share('quizCategories', $quizCategories);
+        try {
+            $quizCategories = Category::orderBy('title')->get();
+            View::share('quizCategories', $quizCategories);
 
-        View::share('randomQuizzes', Quiz::where('active', true)->get()->random(5));
-
+            View::share('randomQuizzes', Quiz::where('active', true)->get()->random(5));
+        } catch (\Exception $exception) {
+            report($exception);
+        }
     }
 }
