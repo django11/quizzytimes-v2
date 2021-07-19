@@ -10,6 +10,11 @@ use Illuminate\Database\Eloquent\Model;
  */
 class FeaturedQuiz extends Model
 {
+    /**
+     * @var string
+     */
+    protected $table = 'featured_quizzes';
+
     const TYPE_BIG = 1;
     const TYPE_SMALL = 2;
 }
