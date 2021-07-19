@@ -18,8 +18,8 @@
                 </div>
             </div>
         @endforeach
-{{--        <div>--}}
-{{--            <iframe id="sidebar-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="{{ route('ads.sidebar') }}"></iframe>--}}
-{{--        </div>--}}
+        <div>
+            <iframe id="sidebar-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="{{ route('ads.sidebar') }}"></iframe>
+        </div>
     </div>
 </aside>

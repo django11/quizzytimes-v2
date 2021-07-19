@@ -13,7 +13,7 @@
 
                     <img :src="question.picture_url" class="img-fluid w-100 mb-5" v-if="question.picture_url">
 
-                    <!--                    <iframe class="d-block w-100 border-0" src="/ads/quiz-top"></iframe>-->
+                    <iframe class="d-block w-100 border-0" src="/ads/quiz-top"></iframe>
                 </div>
 
                 <div class="col-sm-6" v-for="answer in question.answers" :key="answer.id">
@@ -58,9 +58,9 @@
             </div>
         </transition-group>
 
-        <!--        <div class="ads-block">-->
-        <!--            <iframe id="square-middle-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="/ads/square-quiz-middle"></iframe>-->
-        <!--        </div>-->
+        <div class="ads-block">
+            <iframe id="square-middle-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="/ads/square-quiz-middle"></iframe>
+        </div>
 
         <transition name="fade-results">
             <div class="results" v-if="showResultsBlock">
@@ -162,21 +162,21 @@
                     })
             },
 
-            // getAds() {
-            //     document.getElementById('square-middle-ad').contentWindow.location.reload();
-            //     document.getElementById('sidebar-ad').contentWindow.location.reload();
-            // },
+            getAds() {
+                document.getElementById('square-middle-ad').contentWindow.location.reload();
+                document.getElementById('sidebar-ad').contentWindow.location.reload();
+            },
 
             start() {
                 this.started = true;
                 document.querySelector('.quiz-description').classList.add('d-none');
-                // this.getAds();
+                this.getAds();
             },
 
             showNext() {
                 this.showNextButton = false;
                 this.question = this.questions[this.current_question += 1]
-                // this.getAds();
+                this.getAds();
             },
 
             checkAnswer(question, answer, event) {
