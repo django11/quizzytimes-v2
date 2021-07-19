@@ -174,14 +174,14 @@
             },
 
             showNext() {
-                this.showNextButton = false;
-                this.question = this.questions[this.current_question += 1]
-                this.getAds();
                 window.scrollTo({
                     top: 0,
                     left: 0,
                     behavior: 'smooth'
                 });
+                this.showNextButton = false;
+                this.question = this.questions[this.current_question += 1]
+                this.getAds();
             },
 
             checkAnswer(question, answer, event) {
