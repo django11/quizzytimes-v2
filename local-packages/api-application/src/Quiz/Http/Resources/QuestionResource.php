@@ -25,7 +25,7 @@ class QuestionResource extends JsonResource
         return [
             'id'            => $resource->getId(),
             'question_text' => $resource->getQuestionText(),
-            'destription'   => $resource->getDescription(),
+            'description'   => $resource->getDescription(),
             'picture_url'   => $resource->getPictureUrl(),
             'answers'       => AnswerResource::collection($resource->getAnswers())
         ];
