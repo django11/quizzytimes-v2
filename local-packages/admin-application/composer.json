@@ -13,5 +13,12 @@
         "psr-4": {
             "QuizzyTimes\\Admin\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "QuizzyTimes\\Admin\\AdminServiceProvider"
+            ]
+        }
     }
 }
