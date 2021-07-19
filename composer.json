@@ -11,6 +11,10 @@
         },
         {
             "type": "path",
+            "url": "./local-packages/admin-application"
+        },
+        {
+            "type": "path",
             "url": "./local-packages/front-application"
         },
         {
@@ -26,6 +30,7 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "quizzytimes/domain": "*",
+        "quizzytimes/admin-application": "*",
         "quizzytimes/front-application": "*",
         "quizzytimes/api-application": "*"
     },
