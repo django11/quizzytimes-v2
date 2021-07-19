@@ -4,6 +4,7 @@ namespace QuizzyTimes\Domain\Quiz\Models;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
@@ -18,9 +19,9 @@ class Question extends Model
     protected $table = 'quizzes_questions';
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
-    public function answers()
+    public function answers(): HasMany
     {
         return $this->hasMany(Answer::class, 'quiz_question_id');
     }

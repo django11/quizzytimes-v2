@@ -2,8 +2,8 @@
 
 namespace QuizzyTimes\Api\Quiz\Http\Controllers;
 
+use QuizzyTimes\Api\Quiz\Actions\QuizShowAction;
 use QuizzyTimes\Api\Quiz\Http\Resources\QuizResource;
-use QuizzyTimes\Domain\Quiz\Contracts\QuizRepositoryContract;
 
 /**
  * Class QuizShowController
@@ -12,27 +12,13 @@ use QuizzyTimes\Domain\Quiz\Contracts\QuizRepositoryContract;
 class QuizShowController
 {
     /**
-     * @var QuizRepositoryContract
-     */
-    private QuizRepositoryContract $quizRepository;
-
-    /**
-     * QuizShowController constructor.
-     *
-     * @param  QuizRepositoryContract  $quizRepository
-     */
-    public function __construct(QuizRepositoryContract $quizRepository)
-    {
-        $this->quizRepository = $quizRepository;
-    }
-
-    /**
      * @param  int  $id
+     * @param  QuizShowAction  $action
      *
-     * @return mixed
+     * @return QuizResource
      */
-    public function __invoke(int $id)
+    public function __invoke(int $id, QuizShowAction $action)
     {
-        return new QuizResource($this->quizRepository->find($id));
+        return new QuizResource($action->execute($id));
     }
 }
