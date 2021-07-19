@@ -2,6 +2,7 @@
 
 namespace QuizzyTimes\Domain\Quiz\Contracts;
 
+use Illuminate\Database\Eloquent\Collection;
 use Prettus\Repository\Contracts\RepositoryCriteriaInterface;
 use Prettus\Repository\Contracts\RepositoryInterface;
 
@@ -11,5 +12,8 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  */
 interface QuizRepositoryContract extends RepositoryInterface, RepositoryCriteriaInterface
 {
-
+    /**
+     * @return Collection
+     */
+    public function getHomePageQuizzes(): Collection;
 }

@@ -6,8 +6,12 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
+use QuizzyTimes\Domain\Quiz\Contracts\CategoryRepositoryContract;
+use QuizzyTimes\Domain\Quiz\Contracts\QuizRepositoryContract;
 use QuizzyTimes\Domain\Quiz\Models\Category;
 use QuizzyTimes\Domain\Quiz\Models\Quiz;
+use QuizzyTimes\Domain\Quiz\Repositories\EloquentCategoryRepository;
+use QuizzyTimes\Domain\Quiz\Repositories\EloquentQuizRepository;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
@@ -16,6 +20,14 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  */
 class FrontServiceProvider extends ServiceProvider
 {
+    /**
+     * @var array|string[]
+     */
+    public array $bindings = [
+        QuizRepositoryContract::class     => EloquentQuizRepository::class,
+        CategoryRepositoryContract::class => EloquentCategoryRepository::class,
+    ];
+
     public function register()
     {
 

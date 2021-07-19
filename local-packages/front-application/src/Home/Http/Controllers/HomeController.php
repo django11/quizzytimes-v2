@@ -2,8 +2,8 @@
 
 namespace QuizzyTimes\Front\Home\Http\Controllers;
 
-use QuizzyTimes\Domain\Quiz\Models\FeaturedQuiz;
-use QuizzyTimes\Domain\Quiz\Models\Quiz;
+use Illuminate\Contracts\View\View;
+use QuizzyTimes\Front\Home\Actions\HomePageQuizzesIndexAction;
 
 /**
  * Class HomeController
@@ -12,16 +12,14 @@ use QuizzyTimes\Domain\Quiz\Models\Quiz;
 class HomeController
 {
     /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @param  HomePageQuizzesIndexAction  $action
+     *
+     * @return View
      */
-    public function __invoke()
+    public function __invoke(HomePageQuizzesIndexAction $action): View
     {
-        $featuredQuizzes = FeaturedQuiz::limit(6)->get();
-        $latestQuizzes = Quiz::orderBy('created_at', 'DESC')->where('active', true)->get();
-
         return view('quizzytimes::pages.index', [
-            'latestQuizzes' => $latestQuizzes,
-            'featuredQuizzes' => $featuredQuizzes
+            'latestQuizzes' => $action->execute()
         ]);
     }
 }
