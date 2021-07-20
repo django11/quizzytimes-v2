@@ -18,3 +18,6 @@ const mix = require('laravel-mix');
 
 mix.js('local-packages/front-application/resources/js/app.js', 'public/js').vue()
     .sass('local-packages/front-application/resources/sass/app.scss', 'public/css');
+
+
+mix.js('local-packages/admin-application/resources/js/admin/app.js', 'public/js/admin').vue()

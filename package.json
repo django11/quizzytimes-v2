@@ -34,6 +34,7 @@
         "vue-router": "^3.1.5",
         "vue-script-component": "^0.1.7",
         "vue-social-sharing": "^3.0.0-beta.11",
-        "vue-toasted": "^1.1.27"
+        "vue-toasted": "^1.1.27",
+        "vuex": "^3.6.2"
     }
 }
