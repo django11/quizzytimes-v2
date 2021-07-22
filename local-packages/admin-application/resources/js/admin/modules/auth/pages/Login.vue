@@ -39,8 +39,7 @@
         methods: {
             login() {
                 AuthRepository.login(this.email, this.password).then((data) => {
-                    console.log(data);
-                    AuthRepository.getAuthenticatedUser();
+                    this.$store.dispatch('setLoggedAdmin');
                 }).catch((error) => {
                     console.log(error)
                 })

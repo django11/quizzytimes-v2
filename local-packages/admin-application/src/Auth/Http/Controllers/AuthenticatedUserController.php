@@ -2,7 +2,6 @@
 
 namespace QuizzyTimes\Admin\Auth\Http\Controllers;
 
-use Illuminate\Http\Request;
 use QuizzyTimes\Admin\Auth\Http\Resources\AdminResource;
 
 /**

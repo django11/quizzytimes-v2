@@ -1,24 +1,28 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import AuthRepository from "../../modules/auth/repositories/AuthRepository";
 
 Vue.use(Vuex);
 
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
     state: {
         admin: null
     },
     getters: {
-        getAdmin() {
+        getAdmin(state) {
             return state.admin;
-        }
+        },
     },
     actions: {
-        setAdmin({commit}, admin) {
-            commit('SET_ADMIN', admin);
+        setLoggedAdmin({commit, state}) {
+            AuthRepository.getAuthenticatedUser().then((data) => {
+                commit('SET_ADMIN', data);
+            });
         }
     },
     mutations: {
         'SET_ADMIN': function(state, admin) {
+            console.log('aaa', admin)
             state.admin = admin
         }
     },

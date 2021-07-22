@@ -21,7 +21,6 @@ class AuthController
     public function __invoke(Request $request)
     {
         if(!Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
-            $request->session()->regenerate();
             return response()->json([
                 'status_code' => Response::HTTP_UNAUTHORIZED,
                 'message' => 'Unauthorized',
@@ -29,6 +28,5 @@ class AuthController
         }
 
         return response()->json(['message' => 'Success'])->setStatusCode(Response::HTTP_OK);
-//        return new AdminResource(auth('admin')->user());
     }
 }

@@ -19,10 +19,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 window.axios.defaults.withCredentials = true;
 
-const app = new Vue({
-    el: '#app',
-    template: '<Main/>',
-    components: { Main },
-    router,
-    store
+Promise.all([
+    store.dispatch('setLoggedAdmin'),
+]).finally(() => {
+    new Vue({
+        el: '#app',
+        template: '<Main/>',
+        components: { Main },
+        router,
+        store
+    });
 });
