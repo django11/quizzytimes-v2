@@ -3,6 +3,7 @@
 namespace QuizzyTimes\Api\Quiz\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use QuizzyTimes\Domain\Quiz\Contracts\QuizRepositoryContract;
 use QuizzyTimes\Domain\Quiz\Models\Quiz;
 
 /**
@@ -26,6 +27,7 @@ class QuizResource extends JsonResource
             'title' => $resource->getTitle(),
             'questions' => QuestionResource::collection($resource->getQuestions()),
             'created_at' => $resource->getCreatedAt(),
+            'next' => Quiz::inRandomOrder()->first()
         ];
     }
 }

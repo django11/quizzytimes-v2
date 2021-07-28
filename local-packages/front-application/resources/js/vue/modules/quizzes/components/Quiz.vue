@@ -149,7 +149,7 @@
             getQuestions() {
                 QuizRepository.getQuiz(this.quizId)
                     .then(response => {
-                        // this.quiz = response.data.quiz;
+                        this.quiz = response.data;
                         // this.next = response.data.next;
                         this.questions = response.data.questions;
                         this.question = this.questions[this.current_question]
@@ -229,6 +229,7 @@
                 this.answers = [];
                 this.correctAnswers = 0;
                 this.showResultsBlock = false;
+                this.showResultsButton = false;
 
                 this.questions.forEach((question) => {
                     question.answers.forEach((answer) => {
