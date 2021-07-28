@@ -27,7 +27,7 @@ class QuizResource extends JsonResource
             'title' => $resource->getTitle(),
             'questions' => QuestionResource::collection($resource->getQuestions()),
             'created_at' => $resource->getCreatedAt(),
-            'next' => Quiz::inRandomOrder()->first()
+            'next' => Quiz::where('active', true)->inRandomOrder()->first()
         ];
     }
 }

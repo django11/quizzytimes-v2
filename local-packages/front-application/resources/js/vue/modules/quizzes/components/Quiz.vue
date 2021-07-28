@@ -150,7 +150,7 @@
                 QuizRepository.getQuiz(this.quizId)
                     .then(response => {
                         this.quiz = response.data;
-                        // this.next = response.data.next;
+                        this.next = response.data.next.slug;
                         this.questions = response.data.questions;
                         this.question = this.questions[this.current_question]
                         setTimeout(() => {
