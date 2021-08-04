@@ -53,6 +53,7 @@
             <quiz :quiz-id="{{ $quiz->getId() }}"></quiz>
 
             <br>
+            <br>
 
             <div class="ad-hm-slot">
                 <div id="div-gpt-ad-leaderboard-2" class="ad-slot">
