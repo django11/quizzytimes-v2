@@ -5,6 +5,9 @@
     <script src="{{ asset('quizzytimes-hm-min.js') }}"></script>
 </head>
 <body>
-<div data-ad="quizzytimes.com_responsive_r_responsive_square_middle" data-devices="m:1,t:1,d:1" class="demand-supply"></div>
+    <div class="ad-hm-slot">
+        <div id="div-gpt-ad-MPU-1" class="ad-slot">
+        </div>
+    </div>
 </body>
 </html>
