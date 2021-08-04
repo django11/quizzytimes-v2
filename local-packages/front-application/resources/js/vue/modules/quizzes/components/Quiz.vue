@@ -13,7 +13,7 @@
 
                     <img :src="question.picture_url" class="img-fluid w-100 mb-5" v-if="question.picture_url">
 
-                    <iframe class="d-block w-100 border-0" src="/ads/top"></iframe>
+<!--                    <iframe class="d-block w-100 border-0" src="/ads/top"></iframe>-->
                 </div>
 
                 <div class="col-sm-6" v-for="answer in question.answers" :key="answer.id">
@@ -58,9 +58,9 @@
             </div>
         </transition-group>
 
-        <div class="ads-block">
-            <iframe id="square-middle-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="/ads/square"></iframe>
-        </div>
+<!--        <div class="ads-block">-->
+<!--            <iframe id="square-middle-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="/ads/square"></iframe>-->
+<!--        </div>-->
 
         <transition name="fade-results">
             <div class="results" v-if="showResultsBlock">
@@ -163,8 +163,8 @@
             },
 
             getAds() {
-                document.getElementById('square-middle-ad').contentWindow.location.reload();
-                document.getElementById('sidebar-ad').contentWindow.location.reload();
+                // document.getElementById('square-middle-ad').contentWindow.location.reload();
+                // document.getElementById('sidebar-ad').contentWindow.location.reload();
             },
 
             start() {

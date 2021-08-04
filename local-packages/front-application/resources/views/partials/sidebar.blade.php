@@ -18,8 +18,12 @@
                 </div>
             </div>
         @endforeach
-        <div>
-            <iframe id="sidebar-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="{{ route('ads.sidebar') }}"></iframe>
+{{--        <div>--}}
+{{--            <iframe id="sidebar-ad" class="d-block w-100 border-0" style="min-height: 300px;" src="{{ route('ads.sidebar') }}"></iframe>--}}
+{{--        </div>--}}
+        <div class="ad-hm-slot">
+            <div id="div-gpt-ad-skyscraper-1" class="ad-slot">
+            </div>
         </div>
     </div>
 </aside>
