@@ -15,6 +15,11 @@
 
                 </div>
 
+                <div class="ad-hm-slot">
+                    <div id="div-gpt-ad-MPU-1" class="ad-slot">
+                    </div>
+                </div>
+
                 <div class="col-sm-6" v-for="answer in question.answers" :key="answer.id">
                     <label :class="[showAnswers.includes(answer.id) ? 'answer-correct' : '', answer.answer_class ? answer.answer_class : '']"
                            @click.stop="checkAnswer(question, answer, $event)"
