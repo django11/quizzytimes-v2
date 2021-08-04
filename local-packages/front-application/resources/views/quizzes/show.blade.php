@@ -31,7 +31,7 @@
         <div class="single-quiz mb-5">
 
             <div class="ad-hm-slot">
-                <div id="div-gpt-ad-billboard-1" class="ad-slot">
+                <div id="div-gpt-ad-leaderboard-1" class="ad-slot">
                 </div>
             </div>
 
@@ -49,15 +49,11 @@
                 </div>
             </div>
 
-            <div class="ad-hm-slot">
-                <div id="div-gpt-ad-MPU-2" class="ad-slot">
-                </div>
-            </div>
 
             <quiz :quiz-id="{{ $quiz->getId() }}"></quiz>
 
             <div class="ad-hm-slot">
-                <div id="div-gpt-ad-MPU-1" class="ad-slot">
+                <div id="div-gpt-ad-leaderboard-2" class="ad-slot">
                 </div>
             </div>
 

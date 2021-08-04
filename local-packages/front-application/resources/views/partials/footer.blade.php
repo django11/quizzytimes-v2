@@ -1,5 +1,11 @@
 <div  class="container">
     <footer class="pt-4 my-md-5 pt-md-5 border-top">
+
+        <div class="ad-hm-slot">
+            <div id="div-gpt-ad-billboard-1" class="ad-slot">
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-12 col-md">
                 <small class="d-block mb-3 text-muted">QuizzyTimes © 2019 - {{ \Carbon\Carbon::now()->year }}</small>
