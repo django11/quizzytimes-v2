@@ -60,8 +60,8 @@
         gtag('config', 'UA-170209856-1');
     </script>
 
-    <link rel="preload" as="script" href="https://live.demand.supply/up.js">
-    <script async data-cfasync="false" type="text/javascript" src="https://live.demand.supply/up.js"></script>
+    <link rel="preload" as="script" href="{{ asset('quizzytimes-hm-min.js') }}">
+    <script src="{{ asset('quizzytimes-hm-min.js') }}"></script>
 </head>
 <body>
     <div id="app">
