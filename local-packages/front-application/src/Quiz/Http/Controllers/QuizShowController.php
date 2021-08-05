@@ -3,6 +3,7 @@
 namespace QuizzyTimes\Front\Quiz\Http\Controllers;
 
 
+use Illuminate\Support\Facades\Cache;
 use QuizzyTimes\Domain\Quiz\Models\Quiz;
 
 class QuizShowController
@@ -14,7 +15,9 @@ class QuizShowController
      */
     public function __invoke(string $slug)
     {
-        $quiz = Quiz::where('slug', $slug)->where('active', true)->first();
+        $quiz = Cache::remember('quiz:' . $slug, 60*60, function() use ($slug) {
+                    return Quiz::where('slug', $slug)->where('active', true)->first();
+                });
 
         if (!$quiz) {
             abort(404);
