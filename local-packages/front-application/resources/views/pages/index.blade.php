@@ -14,7 +14,9 @@
             @foreach($latestQuizzes as $quiz)
                 <article class="col-md-4">
                     <div class="card quiz-card mb-4">
-                        <div style="height: 200px; width: 100%; background: url({{ $quiz->getPictureUrl() }}); background-size: cover; background-position: center;"></div>
+                        <a href="{{ route('quiz.show', ['slug' => $quiz->getSlug()]) }}">
+                            <div style="height: 200px; width: 100%; background: url({{ $quiz->getPictureUrl() }}); background-size: cover; background-position: center;"></div>
+                        </a>
                         <div class="card-body px-0">
                             <h3><a href="{{ route('quiz.show', ['slug' => $quiz->getSlug()]) }}">{{ $quiz->getTitle() }}</a></h3>
                             <div class="d-flex align-items-center">

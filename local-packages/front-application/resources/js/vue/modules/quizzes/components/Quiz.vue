@@ -240,7 +240,7 @@
             logAnalytics() {
                 gtag('config', 'UA-170209856-1', {
                     'page_title': this.question.question_text,
-                    'page_path': window.location + '?current_question_id=' + this.question.id
+                    'page_path': window.location.href.split('?')[0] + '?current_question_id=' + this.question.id
                 });
             }
         }
